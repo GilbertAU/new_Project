@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GlovalDays : MonoBehaviour
+public class GlobalDays : MonoBehaviour
 {
     public static int DaysCount;
     public GameObject DaysDisplay;

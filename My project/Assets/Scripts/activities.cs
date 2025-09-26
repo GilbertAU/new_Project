@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class activities : MonoBehaviour
 {
+    public GameObject activity;
+    public GameObject back;
     public GameObject chop;
-    public GameObject manage;
-    public GameObject sell;
+    public GameObject sells;
     // Start is called before the first frame update
     void Start()
     {
-        
+        activity.SetActive(true);
+        back.SetActive(false);
+        chop.SetActive(false);
+        sells.SetActive(false);
     }
 
     // Update is called once per frame
@@ -21,18 +25,36 @@ public class activities : MonoBehaviour
         
     }
 
-    public void ChopButton(string sceneName)
+    public void BackButton()
     {
-        SceneManager.LoadScene(sceneName);
+        GlobalDays.DaysCount += 1;
+        activity.SetActive(true);
+        back.SetActive(false);
+        chop.SetActive(false);
+        sells.SetActive(false);
     }
 
-    public void ManageButton(string sceneName)
+    public void ChopButton()
     {
-        SceneManager.LoadScene(sceneName);
+        activity.SetActive(false);
+        back.SetActive(true);
+        chop.SetActive(true);
+        sells.SetActive(false);
     }
 
-    public void SellButton(string sceneName)
+    public void ManageButton()
     {
-        SceneManager.LoadScene(sceneName);
+        activity.SetActive(false);
+        back.SetActive(true);
+        chop.SetActive(false);
+        sells.SetActive(false);
+    }
+
+    public void SellButton()
+    {
+        activity.SetActive(false);
+        back.SetActive(true);
+        chop.SetActive(false);
+        sells.SetActive(true);
     }
 }

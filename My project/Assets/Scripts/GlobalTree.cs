@@ -12,6 +12,6 @@ public class GlobalTree : MonoBehaviour
     private void Update()
     {
         InternalTree = TreeCount;
-        TreeDisplay.GetComponent<Text>().text = "Tree:  " + InternalTree;
+        TreeDisplay.GetComponent<Text>().text = "" + InternalTree;
     }
 }
