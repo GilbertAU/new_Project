@@ -9,6 +9,7 @@ public class activities : MonoBehaviour
     public GameObject activity;
     public GameObject back;
     public GameObject chop;
+    public GameObject manage;
     public GameObject sells;
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class activities : MonoBehaviour
         activity.SetActive(true);
         back.SetActive(false);
         chop.SetActive(false);
+        manage.SetActive(false);
         sells.SetActive(false);
     }
 
@@ -28,9 +30,11 @@ public class activities : MonoBehaviour
     public void BackButton()
     {
         GlobalDays.DaysCount += 1;
+        GlobalTree.TreeCount += GlobalTree.TreeGrowth;
         activity.SetActive(true);
         back.SetActive(false);
         chop.SetActive(false);
+        manage.SetActive(false);
         sells.SetActive(false);
     }
 
@@ -39,6 +43,7 @@ public class activities : MonoBehaviour
         activity.SetActive(false);
         back.SetActive(true);
         chop.SetActive(true);
+        manage.SetActive(false);
         sells.SetActive(false);
     }
 
@@ -47,6 +52,7 @@ public class activities : MonoBehaviour
         activity.SetActive(false);
         back.SetActive(true);
         chop.SetActive(false);
+        manage.SetActive(true);
         sells.SetActive(false);
     }
 
@@ -55,6 +61,7 @@ public class activities : MonoBehaviour
         activity.SetActive(false);
         back.SetActive(true);
         chop.SetActive(false);
+        manage.SetActive(false);
         sells.SetActive(true);
     }
 }

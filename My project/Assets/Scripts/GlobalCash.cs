@@ -8,6 +8,7 @@ public class GlobalCash : MonoBehaviour
     public static int CashCount;
     public GameObject CashDisplay;
     public int InternalCash;
+    public static int CashGrowth = 5;
 
     private void Update()
     {

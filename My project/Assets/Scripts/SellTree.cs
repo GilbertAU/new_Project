@@ -8,14 +8,14 @@ public class SellTree : MonoBehaviour
 
     public void ClickTheButton()
     {
-        if (GlobalTree.TreeCount <= 0)
+        if (GlobalChopped.ChoppedCount <= 0)
         {
-            Debug.Log("No trees to sell");
+            Debug.Log("No Wood to sell");
         }
         else
         {
-            GlobalTree.TreeCount -= 1;
-            GlobalCash.CashCount += 5;
+            GlobalChopped.ChoppedCount -= 1;
+            GlobalCash.CashCount += GlobalCash.CashGrowth;
         }    
     }
 }
