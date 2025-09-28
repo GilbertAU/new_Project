@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GlobalDays : MonoBehaviour
 {
-    public static int DaysCount;
+    public static int DaysCount = 1;
     public GameObject DaysDisplay;
     public int InternalDays;
 

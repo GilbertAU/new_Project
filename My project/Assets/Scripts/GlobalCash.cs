@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class GlobalCash : MonoBehaviour
 {
-    public static int CashCount;
+    public static int CashCount = 0;
     public GameObject CashDisplay;
     public int InternalCash;
     public static int CashGrowth = 5;

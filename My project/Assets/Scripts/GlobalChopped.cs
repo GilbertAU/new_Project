@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class GlobalChopped : MonoBehaviour
 {
-    public static int ChoppedCount;
+    public static int ChoppedCount = 0;
     public GameObject ChoppedDisplay;
     public int InternalChopped;
     public static int ChoppedGrowth = 3;

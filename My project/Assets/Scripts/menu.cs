@@ -6,36 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
-    public GameObject menupanel;
-    public GameObject settingspanel;
-    // Start is called before the first frame update
-    void Start()
+    public static bool isLoading = false;
+
+    public void NewGame()
     {
-        menupanel.SetActive(true);
-        settingspanel.SetActive(false);
+        SceneManager.LoadScene("Game");
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadGame()
     {
-
-    }
-
-    public void StartButton(string sceneName)
-    {
-        SceneManager.LoadScene(sceneName);
-    }
-
-    public void SettingsButton()
-    {
-        menupanel.SetActive(false);
-        settingspanel.SetActive(true);
-    }
-
-    public void BackButton()
-    {
-        menupanel.SetActive(true);
-        settingspanel.SetActive(false);
+        isLoading = true;
+        SceneManager.LoadScene("Game");
     }
 
     public void QuitButton()
