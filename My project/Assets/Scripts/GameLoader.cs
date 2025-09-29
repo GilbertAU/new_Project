@@ -32,13 +32,7 @@ public class GameLoader : MonoBehaviour
         }
         else
         {
-            PlayerPrefs.SetInt("SavedTree", 100);
-            PlayerPrefs.SetInt("SavedTreeGrowth", 10);
-            PlayerPrefs.SetInt("SavedChopped", 0);
-            PlayerPrefs.SetInt("SavedChoppedGrowth", 3);
-            PlayerPrefs.SetInt("SavedCash", 0);
-            PlayerPrefs.SetInt("SavedCashGrowth", 5);
-            PlayerPrefs.SetInt("SavedDays", 1);
+            PlayerPrefs.DeleteAll();
             PlayerPrefs.Save();
 
             GlobalTree.TreeCount = 100;

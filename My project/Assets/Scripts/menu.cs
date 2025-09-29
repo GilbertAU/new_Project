@@ -10,6 +10,7 @@ public class menu : MonoBehaviour
 
     public void NewGame()
     {
+        isLoading = false;
         SceneManager.LoadScene("Game");
     }
 
