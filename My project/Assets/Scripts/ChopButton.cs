@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ChopButton : MonoBehaviour
 {
@@ -8,13 +9,13 @@ public class ChopButton : MonoBehaviour
 
     public void ClickTheButton()
     {
-        if (GlobalTree.TreeCount <= 0)
+        if (GlobalTree.TreeCount < 10)
         {
-            Debug.Log("No Tree");
+            SceneManager.LoadScene("BadEnd");
         }
         else
         {
-            GlobalTree.TreeCount -= 1;
+            GlobalTree.TreeCount -= 3;
             GlobalChopped.ChoppedCount += GlobalChopped.ChoppedGrowth;
         }
     }
